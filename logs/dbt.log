@@ -1,0 +1,151 @@
+
+
+============================== 2023-04-22 16:27:26.169971 | 87daee54-4127-4cd7-9f64-6c66c12b9b91 ==============================
+[0m16:27:26.169971 [info ] [MainThread]: Running with dbt=1.4.6
+[0m16:27:26.172948 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/DanBoucher/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:27:26.173270 [debug] [MainThread]: Tracking: tracking
+[0m16:27:26.207188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7977c4c640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7977c5e8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7977c3a130>]}
+[0m16:27:26.210740 [debug] [MainThread]: Starter project path: /Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m16:27:26.226590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7977ca6520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7977ca6280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7977ca6640>]}
+[0m16:27:26.227237 [debug] [MainThread]: Flushing usage events
+[0m16:27:26.497490 [error] [MainThread]: Encountered an error:
+mapping values are not allowed here
+  in "/Users/DanBoucher/.dbt/profiles.yml", line 7, column 12
+[0m16:27:26.502712 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/task/init.py", line 302, in run
+    if not self.check_if_can_write_profile(profile_name=project_name):
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/task/init.py", line 201, in check_if_can_write_profile
+    profiles = yaml.safe_load(f) or {}
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+  File "/Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/yaml/scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "/Users/DanBoucher/.dbt/profiles.yml", line 7, column 12
+
+
+
+============================== 2023-04-22 16:28:05.526771 | 33ec8a6b-8be0-43c7-ae05-61b52548b244 ==============================
+[0m16:28:05.526771 [info ] [MainThread]: Running with dbt=1.4.6
+[0m16:28:05.528636 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/DanBoucher/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': True, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m16:28:05.528879 [debug] [MainThread]: Tracking: tracking
+[0m16:28:05.547165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6db0c640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6db1ea00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6dafa0d0>]}
+[0m16:28:05.548867 [info ] [MainThread]: To view your profiles.yml file, run:
+
+open /Users/DanBoucher/.dbt
+[0m16:28:05.549724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6db0c640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6dafa0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe6daf4fd0>]}
+[0m16:28:05.550205 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-22 16:28:48.905792 | 9df6fb32-1cc8-471e-9903-ec97fdaa68a4 ==============================
+[0m16:28:48.905792 [info ] [MainThread]: Running with dbt=1.4.6
+[0m16:28:48.907787 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/DanBoucher/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:28:48.908080 [debug] [MainThread]: Tracking: tracking
+[0m16:28:48.930523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e87b44e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e87b447f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e87b32c10>]}
+[0m16:28:48.933588 [info ] [MainThread]: A project called first_project already exists here.
+[0m16:28:48.934374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e87b328e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e87b447f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e87b44e20>]}
+[0m16:28:48.934789 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-22 16:29:03.377865 | bdfd42e1-d190-4cab-8061-30851cb7764c ==============================
+[0m16:29:03.377865 [info ] [MainThread]: Running with dbt=1.4.6
+[0m16:29:03.379979 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/DanBoucher/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project_', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:29:03.380246 [debug] [MainThread]: Tracking: tracking
+[0m16:29:03.401449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa02ac5ee20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa02ac34fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa02ac4cbe0>]}
+[0m16:29:03.404842 [debug] [MainThread]: Starter project path: /Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m16:33:28.305382 [info ] [MainThread]: Profile first_project_ written to /Users/DanBoucher/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:33:28.306674 [info ] [MainThread]: 
+Your new dbt project "first_project_" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:33:28.307265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa02ac4c8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa02ac5ee20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa02ac5edc0>]}
+[0m16:33:28.307742 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-22 16:33:48.763044 | 72ec16ef-d1c4-4427-81b2-6adf11c65dbb ==============================
+[0m16:33:48.763044 [info ] [MainThread]: Running with dbt=1.4.6
+[0m16:33:48.764947 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/DanBoucher/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': True, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m16:33:48.765223 [debug] [MainThread]: Tracking: tracking
+[0m16:33:48.789911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff30032ffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff300356610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff30035abb0>]}
+[0m16:33:48.791501 [info ] [MainThread]: To view your profiles.yml file, run:
+
+open /Users/DanBoucher/.dbt
+[0m16:33:48.792176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff30032ffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff300356dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff30035abb0>]}
+[0m16:33:48.792523 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-22 16:36:35.721335 | 60177132-cc1e-41b2-9e5c-e088e216f171 ==============================
+[0m16:36:35.721335 [info ] [MainThread]: Running with dbt=1.4.6
+[0m16:36:35.723286 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/DanBoucher/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'DS5559_LAB', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:36:35.723555 [debug] [MainThread]: Tracking: tracking
+[0m16:36:35.745455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb6641ab20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb66440d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb66420460>]}
+[0m16:36:35.748990 [debug] [MainThread]: Starter project path: /Users/DanBoucher/Documents/GitHub/DS5559_dbt_lab2/myenv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m16:38:40.899422 [info ] [MainThread]: Profile DS5559_LAB written to /Users/DanBoucher/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:38:40.900259 [info ] [MainThread]: 
+Your new dbt project "DS5559_LAB" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:38:40.900802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb6641ab20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb66440d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb66444f10>]}
+[0m16:38:40.901182 [debug] [MainThread]: Flushing usage events
